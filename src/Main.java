@@ -19,8 +19,7 @@ public class Main {
 
             if (command == 1) {
                 System.out.println("Ваши сбережения: " + moneyBeforeSalary + " RUB");
-                System.out.println("В какую валюту хотите конвертировать? " +
-                        "Доступные варианты: 1 - USD, 2 - EUR, 3 - CNY.");
+                System.out.println("В какую валюту хотите конвертировать? Доступные варианты: 1 - USD, 2 - EUR, 3 - CNY.");
                 int currency = scanner.nextInt();
                 converter.convert(moneyBeforeSalary, currency);
             } else if (command == 2) {
@@ -32,8 +31,13 @@ public class Main {
             } else if (command == 4) {
                 expensesManager.printAllExpenses();
             } else if (command == 5) {
-                System.out.println("Самая большая сумма расходов составила "
-                        + expensesManager.findMaxExpense() + " руб.");
+                System.out.println("Самая большая сумма расходов составила " + expensesManager.findMaxExpense() + " руб.");
+            } else if (command == 6) {
+                expensesManager.removeAllExpenses(); // вызовите соответствующий метод
+            } else if (command == 7) {
+                System.out.println("Введите транзакцию:");
+                int transaction = scanner.nextInt(); // считайте значение транзакции
+                expensesManager.removeExpense(transaction); // вызовите соответствующий метод
             } else if (command == 0) {
                 System.out.println("Выход");
                 break;
@@ -48,8 +52,10 @@ public class Main {
         System.out.println("1 - Конвертировать валюту");
         System.out.println("2 - Получить совет");
         System.out.println("3 - Ввести трату");
-        System.out.println("4 - Показать траты за неделю");
-        System.out.println("5 - Показать самую большую сумму расходов за неделю");
+        System.out.println("4 - Показать траты");
+        System.out.println("5 - Показать самую большую сумму расходов");
+        System.out.println("6 - Очистить список трат");
+        System.out.println("7 - Найти и удалить трату");
         System.out.println("0 - Выход");
     }
 }
