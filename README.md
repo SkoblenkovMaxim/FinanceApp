@@ -1,1 +1,10 @@
-This financial application records expenses, gives advice, and converts currencies.
+#FinanceApp
+Задача по разработке финансового приложения
+
+##Стэк
+* java 21
+
+##Возможности приложения
+* регистрация расходов,
+* рекомендации с учетом количества финансов и дней до зарплаты
+* конвертация валюты
